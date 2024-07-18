@@ -1,6 +1,6 @@
 <template>
   <img id="portrait" alt="Portrait" src="./assets/portrait.jpg" />
-  <NixFoundation msg="Welcome to The Mighty Quinn Music"/>
+  <NixFoundation msg="Welcome to The Mighty Quinn Music (This is not related to Manfred Mann)"/>
 </template>
 
 <script>
