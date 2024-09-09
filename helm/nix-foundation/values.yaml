@@ -1,11 +1,11 @@
-# Default values for nix-foundation.
+# Default values for mighty-quinn.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: justinquinn21/nix-foundation:latest
+  repository: justinquinn21/mighty-quinn:latest
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest

@@ -1,15 +1,15 @@
 <template>
   <img id="portrait" alt="Portrait" src="./assets/portrait.jpg" />
-  <NixFoundation msg="Welcome to The Mighty Quinn Music (adding a test)"/>
+  <MightyQuinn msg="Welcome to The Mighty Quinn Music (adding a test)"/>
 </template>
 
 <script>
-import NixFoundation from "./components/NixFoundation.vue";
+import MightyQuinn from "./components/MightyQuinn.vue";
 
 export default {
   name: "App",
   components: {
-    NixFoundation,
+    MightyQuinn,
   },
 };
 </script>

@@ -19,3 +19,5 @@ spec:
         name: {{ include "mighty-quinn.name" . }}-www
         ports:
         - containerPort: 8080
+        securityContext:
+          privileged: true

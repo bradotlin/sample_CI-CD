@@ -14,7 +14,7 @@ spec:
         app: mighty-quinn-www
     spec:
       containers:
-      - image: justinquinn21/nix-foundation:latest
+      - image: justinquinn21/mighty-quinn:latest
         name: mighty-quinn-www
         ports:
         - containerPort: 8080
