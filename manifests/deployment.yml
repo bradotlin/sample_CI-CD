@@ -18,3 +18,5 @@ spec:
         name: mighty-quinn-www
         ports:
         - containerPort: 8080
+        securityContext:
+          privileged: true
