@@ -21,8 +21,8 @@ jobs:
       WIZ_CLIENT_ID: ${{ secrets.WIZ_CLIENT_ID }}
       WIZ_CLIENT_SECRET: ${{ secrets.WIZ_CLIENT_SECRET }}
       WIZ_IAC_POLICY: "otlin Default IaC policy"
-      WIZ_SECRETS_POLICY: "Default secrets policy"
-      WIZ_VULN_POLICY: "Default vulnerabilities policy"
+      WIZ_SECRETS_POLICY: "otlin Default secrets policy"
+      WIZ_VULN_POLICY: "otlin Default vulnerabilities policy"
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
