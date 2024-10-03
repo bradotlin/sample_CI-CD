@@ -1,6 +1,6 @@
 <template>
   <img id="portrait" alt="Portrait" src="./assets/portrait.jpg" />
-  <MightyQuinn msg="Welcome to The Mighty Quinn Music (updating site name)"/>
+  <MightyQuinn msg="Welcome to The Mighty Quinn Music"/>
 </template>
 
 <script>
