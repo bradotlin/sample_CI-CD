@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mighty-quinn-www
+  name: eyembrad-www
 spec:
   replicas: 1
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: mighty-quinn-www
+      app: eyembrad-www
   template:
     metadata:
       labels:
-        app: mighty-quinn-www
+        app: eyembrad-www
     spec:
       containers:
-      - image: justinquinn21/mighty-quinn:latest
-        name: mighty-quinn-www
+      - image: justinquinn21/eyembrad:latest
+        name: eyembrad-www
         ports:
         - containerPort: 8080
         securityContext:

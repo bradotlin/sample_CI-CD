@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "mighty-quinn.name" . }}-www
+  name: {{ include "eyembrad.name" . }}-www
 spec:
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: {{ include "mighty-quinn.name" . }}-www
+    app: {{ include "eyembrad.name" . }}-www
   type: LoadBalancer
