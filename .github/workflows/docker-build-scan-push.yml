@@ -59,7 +59,7 @@ jobs:
       - run: |
           # Set Docker CLI to use the remote host via SSH
           mkdir -p ~/.ssh
-        # echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         #  chmod 600 ~/.ssh/id_rsa
         # ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
         # ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no username@${{ secrets.REMOTE_HOST }} "echo SSH Connection Successful"
