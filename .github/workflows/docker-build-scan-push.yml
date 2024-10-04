@@ -59,6 +59,6 @@ jobs:
           ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_rsa 
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@${{ secrets.REMOTE_HOST }} "sudo docker run -it --rm -d eyembrad/sample:latest"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@${{ secrets.REMOTE_HOST }} "sudo docker run -it --rm -d --name 1 eyembrad/sample:latest"
           export DOCKER_HOST='ssh://ubuntu@${{ secrets.REMOTE_HOST }}'
-          sudo docker run -it --rm -d eyembrad/sample:latest
+          sudo docker run -it --rm -d --name 2 eyembrad/sample:latest
