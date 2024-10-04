@@ -61,6 +61,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          ls ~/.ssh
           ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
         # ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no username@${{ secrets.REMOTE_HOST }} "echo SSH Connection Successful"
          # export DOCKER_HOST=ssh://username@${{ secrets.REMOTE_HOST }}
