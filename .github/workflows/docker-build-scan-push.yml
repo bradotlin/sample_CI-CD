@@ -62,10 +62,6 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ls ~/.ssh
-
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no username@${{ secrets.REMOTE_HOST }} "echo SSH Connection Successful"
+          ssh-keyscan -H ${{ secrets.REMOTE_HOST }} >> ~/.ssh/known_hosts
           export DOCKER_HOST=ssh://username@${{ secrets.REMOTE_HOST }}
-
-      - name: Run Docker Command on Remote Host
-        run: |
           docker run eyembrad/sample:latest
