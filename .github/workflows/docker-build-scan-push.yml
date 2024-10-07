@@ -50,7 +50,9 @@ jobs:
       - name: Run Wiz CLI image tag
         run: sudo -E ./wizcli docker tag -i ${IMAGE_REPO}:${IMAGE_TAG}
 
-      - run: |
+      - name: SSH to VM to rucn container
+        continue-on-error: true
+        run: |
           # Set Docker CLI to use the remote host via SSH
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
@@ -59,4 +61,5 @@ jobs:
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_rsa 
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@${{ secrets.REMOTE_HOST }} "sudo docker stop cont1"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@${{ secrets.REMOTE_HOST }} "sudo docker rmi eyembrad/sample:latest"
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@${{ secrets.REMOTE_HOST }} "sudo docker run -it --rm -d --name cont1 eyembrad/sample:latest"
