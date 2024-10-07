@@ -1,6 +1,6 @@
 # nix-foundation
 
-## Project setup
+## Project setup 
 ```
 npm install
 ```
