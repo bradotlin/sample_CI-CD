@@ -62,5 +62,4 @@ jobs:
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@${{ secrets.REMOTE_HOST }} "sudo docker stop cont1"
           continue-on-error: true
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@${{ secrets.REMOTE_HOST }} "sudo docker rmi eyembrad/sample:latest"
-          continue-on-error: true
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@${{ secrets.REMOTE_HOST }} "sudo docker run -it --rm -d --name cont1 eyembrad/sample:latest"
